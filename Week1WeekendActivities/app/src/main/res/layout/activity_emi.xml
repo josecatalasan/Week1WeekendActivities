@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EmiActivity">
+
+    <TextView
+        android:id="@+id/emi"
+        style="@style/displayStyle"
+        android:text="EMI"
+        android:textColor="@color/emiColor"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/emiValue"
+        style="@style/displayStyle"
+        android:textColor="@color/emiColor" />
+
+    <TextView
+        android:id="@+id/totalPaid"
+        style="@style/displayStyle"
+        android:text="Total Payment Amount"
+        android:textColor="@color/totalColor"/>
+
+    <TextView
+        android:id="@+id/totalPaidValue"
+        style="@style/displayStyle"
+        android:textColor="@color/totalColor" />
+
+    <TextView
+        android:id="@+id/interestPaid"
+        style="@style/displayStyle"
+        android:text="Total Interest Paid"
+        android:textColor="@color/interestColor" />
+
+    <TextView
+        android:id="@+id/interestPaidValue"
+        style="@style/displayStyle"
+        android:textColor="@color/interestColor" />
+
+    <TextView
+        android:id="@+id/principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:paddingTop="72dp"/>
+
+    <SeekBar
+        android:id="@+id/principalBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max ="200"
+        android:progress="20"/>
+
+    <TextView
+        android:id="@+id/interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:paddingTop="24dp"/>
+
+    <SeekBar
+        android:id="@+id/interestBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max ="300"
+        android:progress="100"/>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:paddingTop="24dp" />
+
+    <SeekBar
+        android:id="@+id/durationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max ="240"
+        android:progress="60"/>
+
+</LinearLayout>
