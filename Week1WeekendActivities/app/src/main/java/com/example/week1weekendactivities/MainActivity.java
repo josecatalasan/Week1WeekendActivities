@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Person;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -59,13 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(emiIntent);
                 return true;
             case R.id.peopleActivity:
+                Intent personIntent = new Intent(this, PersonActivity.class);
+                startActivity(personIntent);
                 return true;
-        }
-        int id = item.getItemId();
+            case R.id.webBrowser:
+                Intent webIntent = new Intent(this, WebBrowserActivity.class);
+                startActivity(webIntent);
+                return true;
+            case R.id.mediaPlayer:
+                Intent mediaPlayerIntent = new Intent(this, MediaPlayerActivity.class);
+                startActivity(mediaPlayerIntent);
 
-        if (id == R.id.emiActivity) {
-            //do button press
-            return true;
         }
 
         return super.onOptionsItemSelected(item);

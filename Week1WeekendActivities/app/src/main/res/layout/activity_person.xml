@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PersonActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PERSONAL INFORMATION"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        style="@style/tvStyle"
+        android:text="First Name:"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etFirstName"/>
+
+    <EditText
+        android:id="@+id/etFirstName"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toRightOf="@id/tvFirstName"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLastName"
+        style="@style/tvStyle"
+        android:text="Last Name:"
+        app:layout_constraintTop_toBottomOf="@id/etFirstName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etLastName"/>
+
+    <EditText
+        android:id="@+id/etLastName"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/etFirstName"
+        app:layout_constraintLeft_toRightOf="@id/tvLastName"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvHeight"
+        style="@style/tvStyle"
+        android:text="Height:"
+        app:layout_constraintTop_toBottomOf="@id/etLastName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etHeight"/>
+
+    <EditText
+        android:id="@+id/etHeight"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/etLastName"
+        app:layout_constraintLeft_toRightOf="@id/tvHeight"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvWeight"
+        style="@style/tvStyle"
+        android:text="Weight:"
+        app:layout_constraintTop_toBottomOf="@id/etHeight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etWeight"/>
+
+    <EditText
+        android:id="@+id/etWeight"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/etHeight"
+        app:layout_constraintLeft_toRightOf="@id/tvWeight"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvBirthday"
+        style="@style/tvStyle"
+        android:text="Birthday:"
+        app:layout_constraintTop_toBottomOf="@id/etWeight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etBirthday"/>
+
+    <EditText
+        android:id="@+id/etBirthday"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/etWeight"
+        app:layout_constraintLeft_toRightOf="@id/tvBirthday"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFavoriteFood"
+        style="@style/tvStyle"
+        android:text="Favorite Food:"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etFavoriteFood"/>
+
+    <EditText
+        android:id="@+id/etFavoriteFood"
+        style="@style/etStyle"
+        app:layout_constraintTop_toBottomOf="@id/etBirthday"
+        app:layout_constraintLeft_toRightOf="@id/tvFavoriteFood"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/addPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ADD PERSON"
+        android:textSize="32dp"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/etFavoriteFood"/>
+
+    <Button
+        android:id="@+id/seeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="See List of People"
+        android:textSize="32dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
